@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BA262CD2B99F3FD0047A90B /* VerIDCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA262CC2B99F3FD0047A90B /* VerIDCommonTypes */; };
+		3BA262D12B99F4150047A90B /* FaceDetectionMediaPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA262D02B99F4150047A90B /* FaceDetectionMediaPipe.swift */; };
+		3BA262D92B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA262D82B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift */; };
+		3BA262DA2B9A0A720047A90B /* FaceDetectionMediaPipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA262C12B99F3A20047A90B /* FaceDetectionMediaPipe.framework */; };
+		3BA262E32B9A0B2B0047A90B /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 3BA262E22B9A0B2B0047A90B /* Resources */; };
+		3BAA9B942C235DD700927727 /* FaceLandmarkDetectionMediaPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA9B932C235DD700927727 /* FaceLandmarkDetectionMediaPipe.swift */; };
+		3BAA9B982C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA9B972C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift */; };
+		3BAA9B9B2C24289800927727 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA9B9A2C24289800927727 /* Errors.swift */; };
+		3BAA9B9F2C2448CE00927727 /* face_landmarker.task in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA9B9E2C2448CE00927727 /* face_landmarker.task */; };
+		3BAE85E32BEE00F400262D15 /* VerIDCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 3BAE85E22BEE00F400262D15 /* VerIDCommonTypes */; };
+		3BAE85E42BEE00F400262D15 /* VerIDCommonTypes in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 3BAE85E22BEE00F400262D15 /* VerIDCommonTypes */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3BAE85EF2BEE1F9E00262D15 /* blaze_face_short_range.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE85EE2BEE1F9E00262D15 /* blaze_face_short_range.tflite */; };
+		3BAE85F02BEE1FCB00262D15 /* FaceDetectionMediaPipeResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE85E82BEE1F2D00262D15 /* FaceDetectionMediaPipeResources.bundle */; };
+		3BAE85F42BEE1FF900262D15 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE85F32BEE1FF900262D15 /* Bundle.swift */; };
+		8365D19DDCEE3D1C613E0C5B /* Pods_FaceDetectionMediaPipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1B4189C1E85D2455C9462A /* Pods_FaceDetectionMediaPipe.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BA262DB2B9A0A720047A90B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BA262B82B99F3A20047A90B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BA262C02B99F3A20047A90B;
+			remoteInfo = FaceDetectionMediaPipe;
+		};
+		3BAE85F12BEE1FD100262D15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BA262B82B99F3A20047A90B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BAE85E72BEE1F2D00262D15;
+			remoteInfo = FaceDetectionMediaPipeResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BAE85E52BEE00F400262D15 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3BAE85E42BEE00F400262D15 /* VerIDCommonTypes in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		200CFFF1FD5697F50B78F15D /* Pods-FaceDetectionMediaPipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetectionMediaPipe.release.xcconfig"; path = "Target Support Files/Pods-FaceDetectionMediaPipe/Pods-FaceDetectionMediaPipe.release.xcconfig"; sourceTree = "<group>"; };
+		3B12738F2C2D6690006C93EE /* FaceDetectionMediaPipe.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = FaceDetectionMediaPipe.podspec; sourceTree = SOURCE_ROOT; };
+		3BA262C12B99F3A20047A90B /* FaceDetectionMediaPipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FaceDetectionMediaPipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA262D02B99F4150047A90B /* FaceDetectionMediaPipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionMediaPipe.swift; sourceTree = "<group>"; };
+		3BA262D62B9A0A720047A90B /* FaceDetectionMediaPipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDetectionMediaPipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA262D82B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionMediaPipeTests.swift; sourceTree = "<group>"; };
+		3BA262E22B9A0B2B0047A90B /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		3BAA9B932C235DD700927727 /* FaceLandmarkDetectionMediaPipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarkDetectionMediaPipe.swift; sourceTree = "<group>"; };
+		3BAA9B972C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarkDetectionMediaPipeTests.swift; sourceTree = "<group>"; };
+		3BAA9B9A2C24289800927727 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3BAA9B9E2C2448CE00927727 /* face_landmarker.task */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_landmarker.task; sourceTree = "<group>"; };
+		3BAE85E82BEE1F2D00262D15 /* FaceDetectionMediaPipeResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDetectionMediaPipeResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAE85EE2BEE1F9E00262D15 /* blaze_face_short_range.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = blaze_face_short_range.tflite; path = Sources/FaceDetectionMediaPipe/Resources/blaze_face_short_range.tflite; sourceTree = SOURCE_ROOT; };
+		3BAE85F32BEE1FF900262D15 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		BA1B4189C1E85D2455C9462A /* Pods_FaceDetectionMediaPipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceDetectionMediaPipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9A6828A4A57060B3ADDA8B /* Pods-FaceDetectionMediaPipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetectionMediaPipe.debug.xcconfig"; path = "Target Support Files/Pods-FaceDetectionMediaPipe/Pods-FaceDetectionMediaPipe.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BA262BE2B99F3A20047A90B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA262CD2B99F3FD0047A90B /* VerIDCommonTypes in Frameworks */,
+				8365D19DDCEE3D1C613E0C5B /* Pods_FaceDetectionMediaPipe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA262D32B9A0A720047A90B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAE85E32BEE00F400262D15 /* VerIDCommonTypes in Frameworks */,
+				3BA262DA2B9A0A720047A90B /* FaceDetectionMediaPipe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BA262B72B99F3A20047A90B = {
+			isa = PBXGroup;
+			children = (
+				3BA262C32B99F3A20047A90B /* FaceDetectionMediaPipe */,
+				3BA262D72B9A0A720047A90B /* FaceDetectionMediaPipeTests */,
+				3BAE85E92BEE1F2D00262D15 /* FaceDetectionMediaPipeResources */,
+				3BA262C22B99F3A20047A90B /* Products */,
+				9987F9AE2749F427BF54513F /* Pods */,
+				D829AAD039A861E26D9CA3FD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BA262C22B99F3A20047A90B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BA262C12B99F3A20047A90B /* FaceDetectionMediaPipe.framework */,
+				3BA262D62B9A0A720047A90B /* FaceDetectionMediaPipeTests.xctest */,
+				3BAE85E82BEE1F2D00262D15 /* FaceDetectionMediaPipeResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BA262C32B99F3A20047A90B /* FaceDetectionMediaPipe */ = {
+			isa = PBXGroup;
+			children = (
+				3B12738F2C2D6690006C93EE /* FaceDetectionMediaPipe.podspec */,
+				3BAE85F32BEE1FF900262D15 /* Bundle.swift */,
+				3BA262D02B99F4150047A90B /* FaceDetectionMediaPipe.swift */,
+				3BAA9B932C235DD700927727 /* FaceLandmarkDetectionMediaPipe.swift */,
+				3BAA9B9A2C24289800927727 /* Errors.swift */,
+			);
+			name = FaceDetectionMediaPipe;
+			path = Sources/FaceDetectionMediaPipe;
+			sourceTree = "<group>";
+		};
+		3BA262D72B9A0A720047A90B /* FaceDetectionMediaPipeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BA262E22B9A0B2B0047A90B /* Resources */,
+				3BA262D82B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift */,
+				3BAA9B972C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift */,
+			);
+			name = FaceDetectionMediaPipeTests;
+			path = Tests/FaceDetectionMediaPipe;
+			sourceTree = "<group>";
+		};
+		3BAE85E92BEE1F2D00262D15 /* FaceDetectionMediaPipeResources */ = {
+			isa = PBXGroup;
+			children = (
+				3BAA9B9E2C2448CE00927727 /* face_landmarker.task */,
+				3BAE85EE2BEE1F9E00262D15 /* blaze_face_short_range.tflite */,
+			);
+			name = FaceDetectionMediaPipeResources;
+			path = Sources/FaceDetectionMediaPipe/Resources;
+			sourceTree = "<group>";
+		};
+		9987F9AE2749F427BF54513F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF9A6828A4A57060B3ADDA8B /* Pods-FaceDetectionMediaPipe.debug.xcconfig */,
+				200CFFF1FD5697F50B78F15D /* Pods-FaceDetectionMediaPipe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D829AAD039A861E26D9CA3FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA1B4189C1E85D2455C9462A /* Pods_FaceDetectionMediaPipe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3BA262BC2B99F3A20047A90B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3BA262C02B99F3A20047A90B /* FaceDetectionMediaPipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA262C82B99F3A20047A90B /* Build configuration list for PBXNativeTarget "FaceDetectionMediaPipe" */;
+			buildPhases = (
+				DA1D92961826858004B34287 /* [CP] Check Pods Manifest.lock */,
+				3BA262BC2B99F3A20047A90B /* Headers */,
+				3BA262BD2B99F3A20047A90B /* Sources */,
+				3BA262BE2B99F3A20047A90B /* Frameworks */,
+				3BA262BF2B99F3A20047A90B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BAE85F22BEE1FD100262D15 /* PBXTargetDependency */,
+			);
+			name = FaceDetectionMediaPipe;
+			packageProductDependencies = (
+				3BA262CC2B99F3FD0047A90B /* VerIDCommonTypes */,
+			);
+			productName = FaceDetectionMediaPipe;
+			productReference = 3BA262C12B99F3A20047A90B /* FaceDetectionMediaPipe.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3BA262D52B9A0A720047A90B /* FaceDetectionMediaPipeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA262DD2B9A0A720047A90B /* Build configuration list for PBXNativeTarget "FaceDetectionMediaPipeTests" */;
+			buildPhases = (
+				3BA262D22B9A0A720047A90B /* Sources */,
+				3BA262D32B9A0A720047A90B /* Frameworks */,
+				3BA262D42B9A0A720047A90B /* Resources */,
+				3BAE85E52BEE00F400262D15 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BA262DC2B9A0A720047A90B /* PBXTargetDependency */,
+			);
+			name = FaceDetectionMediaPipeTests;
+			packageProductDependencies = (
+				3BAE85E22BEE00F400262D15 /* VerIDCommonTypes */,
+			);
+			productName = FaceDetectionMediaPipeTests;
+			productReference = 3BA262D62B9A0A720047A90B /* FaceDetectionMediaPipeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BAE85E72BEE1F2D00262D15 /* FaceDetectionMediaPipeResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BAE85EB2BEE1F2D00262D15 /* Build configuration list for PBXNativeTarget "FaceDetectionMediaPipeResources" */;
+			buildPhases = (
+				3BAE85E62BEE1F2D00262D15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceDetectionMediaPipeResources;
+			productName = FaceDetectionMediaPipeResources;
+			productReference = 3BAE85E82BEE1F2D00262D15 /* FaceDetectionMediaPipeResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BA262B82B99F3A20047A90B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					3BA262C02B99F3A20047A90B = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
+					3BA262D52B9A0A720047A90B = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					3BAE85E72BEE1F2D00262D15 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 3BA262BB2B99F3A20047A90B /* Build configuration list for PBXProject "FaceDetectionMediaPipe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BA262B72B99F3A20047A90B;
+			packageReferences = (
+				3BA262CB2B99F3FD0047A90B /* XCRemoteSwiftPackageReference "Ver-ID-Common-Types-Apple" */,
+			);
+			productRefGroup = 3BA262C22B99F3A20047A90B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BA262C02B99F3A20047A90B /* FaceDetectionMediaPipe */,
+				3BA262D52B9A0A720047A90B /* FaceDetectionMediaPipeTests */,
+				3BAE85E72BEE1F2D00262D15 /* FaceDetectionMediaPipeResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BA262BF2B99F3A20047A90B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAE85F02BEE1FCB00262D15 /* FaceDetectionMediaPipeResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA262D42B9A0A720047A90B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA262E32B9A0B2B0047A90B /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BAE85E62BEE1F2D00262D15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAE85EF2BEE1F9E00262D15 /* blaze_face_short_range.tflite in Resources */,
+				3BAA9B9F2C2448CE00927727 /* face_landmarker.task in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA1D92961826858004B34287 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceDetectionMediaPipe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BA262BD2B99F3A20047A90B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAA9B9B2C24289800927727 /* Errors.swift in Sources */,
+				3BA262D12B99F4150047A90B /* FaceDetectionMediaPipe.swift in Sources */,
+				3BAE85F42BEE1FF900262D15 /* Bundle.swift in Sources */,
+				3BAA9B942C235DD700927727 /* FaceLandmarkDetectionMediaPipe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA262D22B9A0A720047A90B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA262D92B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift in Sources */,
+				3BAA9B982C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BA262DC2B9A0A720047A90B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BA262C02B99F3A20047A90B /* FaceDetectionMediaPipe */;
+			targetProxy = 3BA262DB2B9A0A720047A90B /* PBXContainerItemProxy */;
+		};
+		3BAE85F22BEE1FD100262D15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BAE85E72BEE1F2D00262D15 /* FaceDetectionMediaPipeResources */;
+			targetProxy = 3BAE85F12BEE1FD100262D15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3BA262C62B99F3A20047A90B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BA262C72B99F3A20047A90B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3BA262C92B99F3A20047A90B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF9A6828A4A57060B3ADDA8B /* Pods-FaceDetectionMediaPipe.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CSD8L9EK66;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.FaceDetectionMediaPipe;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BA262CA2B99F3A20047A90B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200CFFF1FD5697F50B78F15D /* Pods-FaceDetectionMediaPipe.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CSD8L9EK66;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.FaceDetectionMediaPipe;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BA262DE2B9A0A720047A90B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSD8L9EK66;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.FaceDetectionMediaPipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BA262DF2B9A0A720047A90B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSD8L9EK66;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.FaceDetectionMediaPipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BAE85EC2BEE1F2D00262D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSD8L9EK66;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.FaceDetectionMediaPipeResources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3BAE85ED2BEE1F2D00262D15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSD8L9EK66;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.FaceDetectionMediaPipeResources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BA262BB2B99F3A20047A90B /* Build configuration list for PBXProject "FaceDetectionMediaPipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA262C62B99F3A20047A90B /* Debug */,
+				3BA262C72B99F3A20047A90B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BA262C82B99F3A20047A90B /* Build configuration list for PBXNativeTarget "FaceDetectionMediaPipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA262C92B99F3A20047A90B /* Debug */,
+				3BA262CA2B99F3A20047A90B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BA262DD2B9A0A720047A90B /* Build configuration list for PBXNativeTarget "FaceDetectionMediaPipeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA262DE2B9A0A720047A90B /* Debug */,
+				3BA262DF2B9A0A720047A90B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BAE85EB2BEE1F2D00262D15 /* Build configuration list for PBXNativeTarget "FaceDetectionMediaPipeResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BAE85EC2BEE1F2D00262D15 /* Debug */,
+				3BAE85ED2BEE1F2D00262D15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BA262CB2B99F3FD0047A90B /* XCRemoteSwiftPackageReference "Ver-ID-Common-Types-Apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git";
+			requirement = {
+				kind = revision;
+				revision = 74b77e3dea2d19f4f22b27b7437c40c38852bdbf;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BA262CC2B99F3FD0047A90B /* VerIDCommonTypes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BA262CB2B99F3FD0047A90B /* XCRemoteSwiftPackageReference "Ver-ID-Common-Types-Apple" */;
+			productName = VerIDCommonTypes;
+		};
+		3BAE85E22BEE00F400262D15 /* VerIDCommonTypes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BA262CB2B99F3FD0047A90B /* XCRemoteSwiftPackageReference "Ver-ID-Common-Types-Apple" */;
+			productName = VerIDCommonTypes;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3BA262B82B99F3A20047A90B /* Project object */;
+}

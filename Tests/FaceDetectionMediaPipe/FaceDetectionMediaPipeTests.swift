@@ -1,0 +1,53 @@
+//
+//  FaceDetectionMediaPipeTests.swift
+//  FaceDetectionMediaPipeTests
+//
+//  Created by Jakub Dolejs on 07/03/2024.
+//
+
+import XCTest
+import VerIDCommonTypes
+@testable import FaceDetectionMediaPipe
+
+final class FaceDetectionMediaPipeTests: XCTestCase {
+    
+    var faceDetector: FaceDetectionMediaPipe!
+
+    override func setUpWithError() throws {
+        self.faceDetector = try FaceDetectionMediaPipe()
+    }
+    
+    func test_detectFaceInImage() throws {
+        try self.testImageURLs.forEach({ url in
+            let imageData = try Data(contentsOf: url)
+            guard let image = UIImage(data: imageData) else {
+                XCTFail()
+                return
+            }
+            let faces = try self.faceDetector.detectFacesInImage(image.convertToImage(), limit: 1)
+            XCTAssertEqual(faces.count, 1)
+        })
+    }
+    
+    func test_faceDetectionSpeed() throws {
+        try self.testImageURLs.forEach({ url in
+            let imageData = try Data(contentsOf: url)
+            guard let image = UIImage(data: imageData) else {
+                XCTFail()
+                return
+            }
+            let verIDImage = try image.convertToImage()
+            measure {
+                do {
+                    _ = try self.faceDetector.detectFacesInImage(verIDImage, limit: 1)
+                } catch {
+                    XCTFail()
+                }
+            }
+        })
+    }
+
+    private lazy var testImageURLs: [URL] = {
+        Bundle(for: type(of: self)).urls(forResourcesWithExtension: "jpg", subdirectory: "test-images") ?? []
+    }()
+}
