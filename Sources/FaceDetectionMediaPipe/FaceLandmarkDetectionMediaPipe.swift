@@ -31,8 +31,6 @@ public class FaceLandmarkDetectionMediaPipe: FaceDetection {
         let result = try self.faceLandmarker.detect(image: mpImage)
         let faces: [Face] = result.faceLandmarks.map {
             let faceLandmarks = $0.map { landmark in CGPoint(x: CGFloat(image.width) * CGFloat(landmark.x), y: CGFloat(image.height) * CGFloat(landmark.y)) }
-//            let leftEye = faceLandmarks[468]
-//            let rightEye = faceLandmarks[473]
             var topLeft: CGPoint?
             var bottomRight: CGPoint?
             for landmark in faceLandmarks {
@@ -68,20 +66,11 @@ public class FaceLandmarkDetectionMediaPipe: FaceDetection {
     
     private func angleFromLandmarks(_ landmarks: [CGPoint]) -> EulerAngle<Float> {
         let noseTip = landmarks[4]
+        let leftEye = landmarks[468]
+        let rightEye = landmarks[473]
         let leftEarTragion = landmarks[234]
         let rightEarTragion = landmarks[454]
-        let centreX = leftEarTragion.x + (rightEarTragion.x - leftEarTragion.x) / 2
-        let x = rightEarTragion.x - leftEarTragion.x
-        let y = noseTip.x - centreX
-        var yaw = 180 - atan2(y, x) * (180 / .pi)
-        if (yaw > 180) {
-            yaw -= 360
-        }
-        yaw *= 1.5
-        let radius = sqrt(x * x + y * y)
-        let centreY = leftEarTragion.y + (rightEarTragion.y - leftEarTragion.y) / 2
-        let pitch = sin((noseTip.y - centreY) / radius) * (180 / .pi) - 10
-        return EulerAngle<Float>(yaw: Float(yaw), pitch: Float(pitch), roll: 0)
+        return FaceAngleCalculator.calculateFaceAngle(leftEye: leftEye, rightEye: rightEye, noseTip: noseTip, leftEarTragion: leftEarTragion, rightEarTragion: rightEarTragion)
     }
 }
 

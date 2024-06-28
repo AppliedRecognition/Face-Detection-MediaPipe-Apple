@@ -36,26 +36,11 @@ public class FaceDetectionMediaPipe: FaceDetection {
     }
     
     private func angleFromKeypoints(_ keypoints: [NormalizedKeypoint]) -> EulerAngle<Float> {
-        guard let noseTip = keypoints.first(where: { $0.label == "noseTip" })?.location else {
-            return .identity
-        }
-        guard let leftEarTragion = keypoints.first(where: { $0.label == "leftEarTragion" })?.location else {
-            return .identity
-        }
-        guard let rightEarTragion = keypoints.first(where: { $0.label == "rightEarTragion" })?.location else {
-            return .identity
-        }
-        let centreX = leftEarTragion.x + (rightEarTragion.x - leftEarTragion.x) / 2
-        let x = rightEarTragion.x - leftEarTragion.x
-        let y = noseTip.x - centreX
-        var yaw = 180 - atan2(y, x) * (180 / .pi)
-        if (yaw > 180) {
-            yaw -= 360
-        }
-        yaw *= 1.5
-        let radius = sqrt(x * x + y * y)
-        let centreY = leftEarTragion.y + (rightEarTragion.y - leftEarTragion.y) / 2
-        let pitch = sin((noseTip.y - centreY) / radius) * (180 / .pi) - 10
-        return EulerAngle<Float>(yaw: Float(yaw), pitch: Float(pitch), roll: 0)
+        let leftEye = keypoints[0].location
+        let rightEye = keypoints[1].location
+        let noseTip = keypoints[2].location
+        let leftEarTragion = keypoints[4].location
+        let rightEarTragion = keypoints[5].location
+        return FaceAngleCalculator.calculateFaceAngle(leftEye: leftEye, rightEye: rightEye, noseTip: noseTip, leftEarTragion: leftEarTragion, rightEarTragion: rightEarTragion)
     }
 }

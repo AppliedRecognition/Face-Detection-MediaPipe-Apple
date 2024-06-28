@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1273912C2F2F1F006C93EE /* TestImageSupplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1273902C2F2F1F006C93EE /* TestImageSupplier.swift */; };
+		3B1273932C2F41E6006C93EE /* FaceAngleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1273922C2F41E6006C93EE /* FaceAngleCalculator.swift */; };
 		3BA262CD2B99F3FD0047A90B /* VerIDCommonTypes in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA262CC2B99F3FD0047A90B /* VerIDCommonTypes */; };
 		3BA262D12B99F4150047A90B /* FaceDetectionMediaPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA262D02B99F4150047A90B /* FaceDetectionMediaPipe.swift */; };
 		3BA262D92B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA262D82B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift */; };
@@ -57,7 +59,9 @@
 
 /* Begin PBXFileReference section */
 		200CFFF1FD5697F50B78F15D /* Pods-FaceDetectionMediaPipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDetectionMediaPipe.release.xcconfig"; path = "Target Support Files/Pods-FaceDetectionMediaPipe/Pods-FaceDetectionMediaPipe.release.xcconfig"; sourceTree = "<group>"; };
-		3B12738F2C2D6690006C93EE /* FaceDetectionMediaPipe.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = FaceDetectionMediaPipe.podspec; sourceTree = SOURCE_ROOT; };
+		3B12738F2C2D6690006C93EE /* FaceDetectionMediaPipe.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FaceDetectionMediaPipe.podspec; sourceTree = SOURCE_ROOT; };
+		3B1273902C2F2F1F006C93EE /* TestImageSupplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageSupplier.swift; sourceTree = "<group>"; };
+		3B1273922C2F41E6006C93EE /* FaceAngleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAngleCalculator.swift; sourceTree = "<group>"; };
 		3BA262C12B99F3A20047A90B /* FaceDetectionMediaPipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FaceDetectionMediaPipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA262D02B99F4150047A90B /* FaceDetectionMediaPipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionMediaPipe.swift; sourceTree = "<group>"; };
 		3BA262D62B9A0A720047A90B /* FaceDetectionMediaPipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDetectionMediaPipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,7 @@
 				3BA262D02B99F4150047A90B /* FaceDetectionMediaPipe.swift */,
 				3BAA9B932C235DD700927727 /* FaceLandmarkDetectionMediaPipe.swift */,
 				3BAA9B9A2C24289800927727 /* Errors.swift */,
+				3B1273922C2F41E6006C93EE /* FaceAngleCalculator.swift */,
 			);
 			name = FaceDetectionMediaPipe;
 			path = Sources/FaceDetectionMediaPipe;
@@ -137,6 +142,7 @@
 				3BA262E22B9A0B2B0047A90B /* Resources */,
 				3BA262D82B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift */,
 				3BAA9B972C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift */,
+				3B1273902C2F2F1F006C93EE /* TestImageSupplier.swift */,
 			);
 			name = FaceDetectionMediaPipeTests;
 			path = Tests/FaceDetectionMediaPipe;
@@ -345,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1273932C2F41E6006C93EE /* FaceAngleCalculator.swift in Sources */,
 				3BAA9B9B2C24289800927727 /* Errors.swift in Sources */,
 				3BA262D12B99F4150047A90B /* FaceDetectionMediaPipe.swift in Sources */,
 				3BAE85F42BEE1FF900262D15 /* Bundle.swift in Sources */,
@@ -358,6 +365,7 @@
 			files = (
 				3BA262D92B9A0A720047A90B /* FaceDetectionMediaPipeTests.swift in Sources */,
 				3BAA9B982C23685500927727 /* FaceLandmarkDetectionMediaPipeTests.swift in Sources */,
+				3B1273912C2F2F1F006C93EE /* TestImageSupplier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
