@@ -31,33 +31,13 @@ public class FaceLandmarkDetectionMediaPipe: FaceDetection {
         let result = try self.faceLandmarker.detect(image: mpImage)
         let faces: [Face] = result.faceLandmarks.map {
             let faceLandmarks = $0.map { landmark in CGPoint(x: CGFloat(image.width) * CGFloat(landmark.x), y: CGFloat(image.height) * CGFloat(landmark.y)) }
-            var topLeft: CGPoint?
-            var bottomRight: CGPoint?
-            for landmark in faceLandmarks {
-                if var tl = topLeft {
-                    if landmark.x < tl.x {
-                        tl.x = landmark.x
-                    }
-                    if landmark.y < tl.y {
-                        tl.y = landmark.y
-                    }
-                } else {
-                    topLeft = landmark
-                }
-                if var br = bottomRight {
-                    if landmark.x > br.x {
-                        br.x = landmark.x
-                    }
-                    if landmark.y > br.y {
-                        br.y = landmark.y
-                    }
-                } else {
-                    bottomRight = landmark
-                }
-            }
-            let width = bottomRight!.x - topLeft!.x
-            let height = bottomRight!.y - topLeft!.y
-            let face = Face(bounds: CGRect(x: topLeft!.x, y: topLeft!.y, width: width, height: height).insetBy(dx: 0 - width * 0.1, dy: 0 - height * 0.1), angle: self.angleFromLandmarks(faceLandmarks), quality: 10, landmarks: faceLandmarks)
+            let minX: CGFloat = faceLandmarks.map { $0.x }.min()!
+            let minY: CGFloat = faceLandmarks.map { $0.y }.min()!
+            let maxX: CGFloat = faceLandmarks.map { $0.x }.max()!
+            let maxY: CGFloat = faceLandmarks.map { $0.y}.max()!
+            let width = maxX - minX
+            let height = maxY - minY
+            let face = Face(bounds: CGRect(x: minX, y: minY, width: width, height: height).insetBy(dx: 0 - width * 0.1, dy: 0 - height * 0.1), angle: self.angleFromLandmarks(faceLandmarks), quality: 10, landmarks: faceLandmarks)
             return face
         }
         let centre = CGPoint(x: image.width / 2, y: image.height / 2)
