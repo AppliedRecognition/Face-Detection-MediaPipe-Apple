@@ -28,11 +28,14 @@ public class FaceDetectionMediaPipe: FaceDetection {
         let mpImage = try MPImage(uiImage: UIImage(cgImage: cgImage))
         let result = try self.faceDetector.detect(image: mpImage)
         let transform = CGAffineTransform(scaleX: CGFloat(image.width), y: CGFloat(image.height))
+        if result.detections.isEmpty {
+            return []
+        }
         return Array(result.detections.map { detection in
             let keypoints = detection.keypoints?.map({ NormalizedKeypoint(location: $0.location.applying(transform), label: $0.label, score: $0.score)}) ?? []
             let angle = self.angleFromKeypoints(keypoints)
             return Face(bounds: detection.boundingBox, angle: angle, quality: detection.categories.first?.score ?? 10, landmarks: keypoints.map({ $0.location }))
-        }.sorted(by: <)[0..<limit])
+        }.sorted(by: <)[0..<min(result.detections.count, limit)])
     }
     
     private func angleFromKeypoints(_ keypoints: [NormalizedKeypoint]) -> EulerAngle<Float> {

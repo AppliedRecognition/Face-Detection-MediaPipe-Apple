@@ -40,8 +40,11 @@ public class FaceLandmarkDetectionMediaPipe: FaceDetection {
             let face = Face(bounds: CGRect(x: minX, y: minY, width: width, height: height).insetBy(dx: 0 - width * 0.1, dy: 0 - height * 0.1), angle: self.angleFromLandmarks(faceLandmarks), quality: 10, landmarks: faceLandmarks)
             return face
         }
+        if faces.isEmpty {
+            return []
+        }
         let centre = CGPoint(x: image.width / 2, y: image.height / 2)
-        return faces.sorted(by: { $0.bounds.centre.distance(to: centre) < $1.bounds.centre.distance(to: centre) })
+        return Array(faces.sorted(by: { $0.bounds.centre.distance(to: centre) < $1.bounds.centre.distance(to: centre) })[0..<min(faces.count, limit)])
     }
     
     private func angleFromLandmarks(_ landmarks: [CGPoint]) -> EulerAngle<Float> {
