@@ -26,8 +26,7 @@ public class FaceLandmarkDetectionMediaPipe: FaceDetection {
     }
     
     public func detectFacesInImage(_ image: Image, limit: Int) throws -> [Face] {
-        let cgImage = try image.convertToCGImage()
-        let mpImage = try MPImage(uiImage: UIImage(cgImage: cgImage))
+        let mpImage = try MPImage(pixelBuffer: image.videoBuffer)
         let result = try self.faceLandmarker.detect(image: mpImage)
         let faces: [Face] = result.faceLandmarks.map {
             let faceLandmarks = $0.map { landmark in CGPoint(x: CGFloat(image.width) * CGFloat(landmark.x), y: CGFloat(image.height) * CGFloat(landmark.y)) }
@@ -37,7 +36,16 @@ public class FaceLandmarkDetectionMediaPipe: FaceDetection {
             let maxY: CGFloat = faceLandmarks.map { $0.y}.max()!
             let width = maxX - minX
             let height = maxY - minY
-            let face = Face(bounds: CGRect(x: minX, y: minY, width: width, height: height).insetBy(dx: 0 - width * 0.1, dy: 0 - height * 0.1), angle: self.angleFromLandmarks(faceLandmarks), quality: 10, landmarks: faceLandmarks)
+            let face = Face(
+                bounds: CGRect(x: minX, y: minY, width: width, height: height).insetBy(dx: 0 - width * 0.1, dy: 0 - height * 0.1),
+                angle: self.angleFromLandmarks(faceLandmarks),
+                quality: 10,
+                landmarks: faceLandmarks,
+                leftEye: faceLandmarks[468],
+                rightEye: faceLandmarks[473],
+                noseTip: faceLandmarks[4],
+                mouthCentre: faceLandmarks[13]
+            )
             return face
         }
         if faces.isEmpty {

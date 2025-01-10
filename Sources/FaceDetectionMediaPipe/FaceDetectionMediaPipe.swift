@@ -24,8 +24,9 @@ public class FaceDetectionMediaPipe: FaceDetection {
     }
     
     public func detectFacesInImage(_ image: Image, limit: Int) throws -> [Face] {
-        let cgImage = try image.convertToCGImage()
-        let mpImage = try MPImage(uiImage: UIImage(cgImage: cgImage))
+//        let cgImage = try image.convertToCGImage()
+        let mpImage = try MPImage(pixelBuffer: image.videoBuffer)
+//        let mpImage = try MPImage(uiImage: UIImage(cgImage: cgImage))
         let result = try self.faceDetector.detect(image: mpImage)
         let transform = CGAffineTransform(scaleX: CGFloat(image.width), y: CGFloat(image.height))
         if result.detections.isEmpty {
@@ -34,7 +35,16 @@ public class FaceDetectionMediaPipe: FaceDetection {
         return Array(result.detections.map { detection in
             let keypoints = detection.keypoints?.map({ NormalizedKeypoint(location: $0.location.applying(transform), label: $0.label, score: $0.score)}) ?? []
             let angle = self.angleFromKeypoints(keypoints)
-            return Face(bounds: detection.boundingBox, angle: angle, quality: detection.categories.first?.score ?? 10, landmarks: keypoints.map({ $0.location }))
+            return Face(
+                bounds: detection.boundingBox,
+                angle: angle,
+                quality: detection.categories.first?.score ?? 10,
+                landmarks: keypoints.map({ $0.location }),
+                leftEye: keypoints[0].location,
+                rightEye: keypoints[1].location,
+                noseTip: keypoints[2].location,
+                mouthCentre: keypoints[3].location
+            )
         }.sorted(by: <)[0..<min(result.detections.count, limit)])
     }
     

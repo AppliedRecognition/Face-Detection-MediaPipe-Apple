@@ -7,5 +7,5 @@ target 'FaceDetectionMediaPipe' do
 
   # Pods for FaceDetectionMediaPipe
   pod 'MediaPipeTasksVision', '~> 0.10'
-  pod 'VerIDCommonTypes', :git => 'https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git', :tag => '1.0.0'
+  pod 'VerIDCommonTypes', :git => 'https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git', :commit => '0debdd8d6f1c04b6b7dfd4161f27911c06b2e174'
 end
