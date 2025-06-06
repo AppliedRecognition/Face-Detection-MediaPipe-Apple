@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.source = { :git => "https://github.com/AppliedRecognition/Face-Detection-MediaPipe-Apple.git", :tag => "#{spec.version}" }
   spec.source_files = "Sources/FaceDetectionMediaPipe/*.swift"
   spec.resource_bundles = { "FaceDetectionMediaPipeResources" => ["Sources/FaceDetectionMediaPipe/Resources/*.*"] }
-  spec.dependency "VerIDCommonTypes", "~> 1.0"
+  spec.dependency "VerIDCommonTypes", "~> 1.2"
   spec.dependency "MediaPipeTasksVision", "~> 0.10"
 
 end
